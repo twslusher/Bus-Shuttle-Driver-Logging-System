@@ -1,0 +1,11 @@
+<h2>Stops</h2>
+<ul class="stops">
+  <li *ngFor="let stop of stops" (click)="onSelect(stop)">
+    <span class="badge">{{stop.id}}</span> {{stop.name}}
+  </li>
+</ul>
+
+
+<div *ngIf="selectedStop">
+<div><span>STOP: </span>{{selectedStop.name}}</div>
+</div>
